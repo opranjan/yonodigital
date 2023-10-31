@@ -389,9 +389,9 @@ const PaymentComponent = ( amount, checkoutHandle) => {
 
   const checkoutHandler = async (amount) => {
 
-    const { data: { key } } = await axios.get("http://localhost:5000/api/getkey");
+    const { data: { key } } = await axios.get("https://ydbackend.onrender.com/api/getkey");
 
-     const { data: { order } }  = await axios.post("http://localhost:5000/api/v1/checkout", {
+     const { data: { order } }  = await axios.post("https://ydbackend.onrender.com/api/v1/checkout", {
             amount
         })
 
@@ -405,7 +405,7 @@ const PaymentComponent = ( amount, checkoutHandle) => {
         description: "Payment for Shopping",
         image: "https://avatars.githubusercontent.com/u/25058652?v=4",
         order_id: order.id,
-        callback_url: "http://localhost:5000/api/v1/paymentverification",
+        callback_url: "https://ydbackend.onrender.com/api/v1/paymentverification",
         prefill: {
             name: "Gaurav Kumar",
             email: "gaurav.kumar@example.com",
