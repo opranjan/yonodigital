@@ -1,0 +1,7 @@
+@media only screen and (max-width: 600px) {
+    .root{
+        width: 100px;
+        background-color: red;
+        
+      }
+  }
